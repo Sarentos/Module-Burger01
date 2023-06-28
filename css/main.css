@@ -165,7 +165,8 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    padding: 100px;
+    padding: 100px 100px 120px;
+    margin-bottom: 100px;
 }
 
 .banner-title {
@@ -208,4 +209,104 @@ header {
     color: #1E2F40;
     background-color: #FBB731;
     border-radius: 5px;
+}
+
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 34px;
+}
+
+.menu-title {
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1B2A49;
+    margin: 0;
+}
+
+.menu-select {
+    border: 1px solid #DEDEDE;
+    padding: 13px 30px;
+    border-radius: 22px;
+    color: #443737;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    appearance: none;
+    flex-basis: 279px;
+    background: url(../img/arrow.svg);
+    background-size: 12.79px 7.75px;
+    background-repeat: no-repeat;
+    background-position: 89% center;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.menu-grid-cover {
+    width: 100%;
+    height: 430px;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-grid-cover img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.menu-grid-title {
+    text-align: center;
+    color: #1B2A49;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 38px;
+    margin-bottom: 5px;
+}
+
+.menu-grid-price {
+    text-align: center;
+    color: #979797;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 20px;
+}
+
+.menu-grid-btn {
+    margin: 0 auto;
+    width: 152px;
+    height: 38px;
+    display: block;
+    border-radius: 5px;
+    border:none;
+    background: #FBB731;
+    margin-bottom: 50px;
+}
+
+.menu-grid-text {
+    color: #1E2F40;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+.other {
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1B2A49;
+    margin: 0;
+    margin-bottom: 34px;
 }
