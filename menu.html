@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600;700;800;900&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
     <title>Burger</title>
 </head>
+
 <body>
-    <header>
+    <header id="headerTop">
         <div class="container">
             <div class="header">
                 <div class="header-item">
@@ -224,5 +228,56 @@
             </div>
         </div>
     </footer>
+
+    <a href="#headerTop" class="button-up hidden" id="btnUp">Наверх</a>
+
+    <script>
+        
+        // Smoth Scroll
+
+        const links = document.querySelectorAll(".banner-link");
+
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+            document.querySelector(href).scrollIntoView({
+                behavior: "smooth"
+            });
+        }
+
+        // Button Up
+
+        window.onscroll = function(){scrollFunction()};
+
+       const upbuttons = document.querySelectorAll(".button-up");
+
+       for (const upbutton of upbuttons) {
+           upbutton.addEventListener("click", clickHandler);
+       }
+
+       function clickHandler(e) {
+       e.preventDefault();
+       const href = this.getAttribute("href");
+
+       document.querySelector(href).scrollIntoView({
+           behavior: "smooth"
+       });
+       }
+
+       function scrollFunction(){
+           if ( document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000){
+               document.getElementById('btnUp').className = 'button-up visible';
+           } else {
+               document.getElementById('btnUp').className = 'button-up hidden';
+           }
+       }
+
+    </script>
 </body>
+
 </html>

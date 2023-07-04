@@ -172,7 +172,7 @@ header {
     background-size: cover;
     background-position: center center;
     padding: 100px 100px 120px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 .banner-title {
@@ -216,11 +216,16 @@ header {
     background-color: #FBB731;
     border-radius: 5px;
     border: 1px solid #FBB731;
+    transition: 0.2s;
 }
 
 .banner-link:hover {
     background-color: transparent;
     color: #FBB731;
+}
+
+.menu {
+    padding-top: 20px;
 }
 
 .menu-header {
@@ -302,6 +307,7 @@ header {
     align-items: center;
     margin: 0 auto;
     gap: 9px;
+    transition: 0.2s;
 }
 
 .menu-grid-btn:hover {
@@ -405,6 +411,33 @@ header {
 .footer-list {
     padding-left: 0;
     list-style-type: none;
+}
+
+.button-up {
+    background-color: #FBB731;
+    color: #1E2F40;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 5px 20px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    transition: 1s;
+}
+
+.button-up.hidden {
+    opacity: 0;
+}
+
+.button-up.visible {
+    opacity: 1;
+}
+
+.button-up:hover {
+    background: #F37335;
 }
 
 /* Style INDEX */
@@ -533,3 +566,5 @@ header {
     margin-bottom: 10px;
     margin-top: 0;
 }
+
+
