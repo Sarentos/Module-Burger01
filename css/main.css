@@ -3,7 +3,7 @@ body {
 }
 
 .container{
-    width: 1180px;
+    max-width: 1180px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -105,8 +105,8 @@ header {
 
 .bg {
     text-align: center;
-    color: #FFF;
-    background-image: url(../img/main-menu1.jpg);
+    color: #FFFFFF;
+    background-image: url(../img/main-menu.jpg);
     background-size: cover;
     background-position: center center;
     padding: 142px 0;
@@ -170,7 +170,7 @@ header {
     background-image: url(../img/banner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: 0 center;
     padding: 100px 100px 120px;
     margin-bottom: 80px;
 }
@@ -567,4 +567,41 @@ header {
     margin-top: 0;
 }
 
+/* Responsive */
 
+@media (max-width: 1000px) {
+    .container {
+        max-width: 738px;
+    }
+    .header-logo {
+        width: 150px;
+        height: 48px;
+        background-size: contain;
+    }
+    .header-nav {
+        gap: 22px;
+    }
+    .header-item {
+        flex-basis: 75.5%;
+    }
+    .bg {
+        margin-bottom: 72px;
+    }
+    .banner-box {
+        background-position: -80px center;
+        padding: 100px 40px;
+    }
+    .menu-grid {
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px 15px;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+        text-align: center;
+    }
+    .footer-item {
+        margin-bottom: 30px;
+    }
