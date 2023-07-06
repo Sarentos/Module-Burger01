@@ -2,7 +2,7 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
-.container{
+.container {
     max-width: 1180px;
     margin: 0 auto;
     padding-left: 15px;
@@ -44,10 +44,11 @@ header {
     padding-left: 0;
     gap: 46px;
 }
+
 .header-nav a {
     font-weight: 600;
     font-size: 20px;
-    color: #443737; 
+    color: #443737;
     text-decoration: none;
 }
 
@@ -260,7 +261,7 @@ header {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px 20px;
     text-align: center;
     margin-bottom: 100px;
@@ -393,7 +394,7 @@ header {
     margin-top: 0;
 }
 
-.footer-list-tel a{
+.footer-list-tel a {
     font-size: 20px;
     font-weight: 900;
     color: #FBB731;
@@ -404,7 +405,7 @@ header {
     color: #DEDEDE;
 }
 
-.footer-list-tel li{
+.footer-list-tel li {
     margin-bottom: 12px;
 }
 
@@ -445,18 +446,21 @@ header {
 .main {
     background: linear-gradient(180deg, #0C4C7B -100%, #1E2F40 100%);
 }
+
 .wrapper {
     max-width: 1180px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
 }
+
 .content {
     color: #FAF9F9;
     flex: 0 0 580px;
     padding-top: 170px;
     padding-bottom: 170px;
 }
+
 .content-title {
     font-size: 120px;
     font-weight: 800;
@@ -466,6 +470,7 @@ header {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .content-title span {
     color: #FBB731;
     font-size: 30px;
@@ -474,12 +479,14 @@ header {
     display: block;
     margin-bottom: 10px;
 }
+
 .content-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 19px;
     line-height: 1.4;
     margin-bottom: 42px;
 }
+
 .content-link,
 .promo a {
     color: #1E2F40;
@@ -492,26 +499,31 @@ header {
     font-size: 14px;
     font-weight: 700;
 }
+
 .visual {
     flex-grow: 1;
     display: flex;
     justify-content: flex-end;
     position: relative;
 }
+
 .visual-bg {
     width: 432px;
     height: 100%;
     background: linear-gradient(2.42deg, #F37335 -19.6%, #FBB731 100.79%, #FDC830 100.79%);
 }
+
 .main img {
     width: 829px;
     position: absolute;
     right: -168px;
 }
+
 .promo {
     padding-top: 186px;
     padding-bottom: 46px;
 }
+
 .promo-left,
 .promo-right {
     flex: 0 0 49%;
@@ -521,14 +533,17 @@ header {
     background-size: cover;
     background-position: center;
 }
+
 .promo-left {
     background-image: url(../img/promo-left.png);
     padding: 116px 50px;
 }
+
 .promo-right {
     background-image: url(../img/promo-right.png);
     padding: 102px 50px;
 }
+
 .sale {
     font-size: 14px;
     font-weight: 900;
@@ -540,12 +555,14 @@ header {
     margin-bottom: 3px;
     margin-top: 0;
 }
+
 .cost {
     font-size: 60px;
     font-weight: 900;
     margin-bottom: 8px;
     margin-top: 0;
 }
+
 .promo-description {
     font-family: 'Open Sans', sans-serif;
     color: #FAF9F9;
@@ -553,13 +570,16 @@ header {
     line-height: 24px;
     margin-bottom: 0;
 }
+
 .promo-left .promo-description {
     max-width: 392px;
 }
+
 .promo-right .promo-description {
     max-width: 300px;
     margin-bottom: 20px;
 }
+
 .free {
     font-size: 44px;
     font-weight: 700;
@@ -567,41 +587,175 @@ header {
     margin-top: 0;
 }
 
+/* Modal */
+
+.burger {
+    width: 34px;
+    height: 22px;
+    background-image: url(../img/burger.svg);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+}
+
+.modal {
+    background-color: #FFF8DC;
+    max-width: 500px;
+    text-align: center;
+    position: absolute;
+    top: -400px;
+    left: 0;
+    right: 0;
+    margin: 20px auto 0;
+    padding: 40px 30px;
+    box-sizing: border-box;
+    transition: .5s;
+}
+
+.modal .header-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 23px;
+    margin: 0;
+}
+
+.burger-close {
+    width: 22px;
+    height: 22px;
+    background-image: url(../img/close.svg);
+    background-color: transparent;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
 /* Responsive */
+
+@media (min-width: 1001px) {
+    .footer-list+.footer-list-tel {
+        display: none;
+    }
+}
+
+@media (min-width: 766px) {
+    .header-burger {
+        display: none;
+    }
+}
 
 @media (max-width: 1000px) {
     .container {
         max-width: 738px;
     }
+
     .header-logo {
         width: 150px;
         height: 48px;
         background-size: contain;
     }
+
     .header-nav {
         gap: 22px;
     }
+
     .header-item {
         flex-basis: 75.5%;
     }
+
     .bg {
         margin-bottom: 72px;
     }
+
     .banner-box {
         background-position: -80px center;
         padding: 100px 40px;
     }
+
     .menu-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px 15px;
     }
-    .footer-box {
+
+    .menu-other {
+        overflow: hidden;
+        height: 560px;
+    }
+
+    .menu-other .menu-grid {
         display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-between;
-        text-align: center;
+        width: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        padding-bottom: 50px;
     }
-    .footer-item {
-        margin-bottom: 30px;
+
+    .menu-other .menu-grid-item {
+        flex: 0 0 281px;
     }
+
+    .menu-other .menu-grid-cover,
+    .menu-other .menu-grid-cover img {
+        height: 320px;
+    }
+
+    .footer-tel {
+        display: none;
+    }
+
+    .footer-list+.footer-list-tel {
+        display: block;
+    }
+}
+
+@media (max-width: 765px) {
+    nav {
+        display: none;
+    }
+    .header {
+        gap: 21px;
+    }
+}
+
+@media (max-width: 567px) {
+    .breadcrumbs {
+        font-size: 14px;
+    }
+    .description {
+        font-size: 12px;
+    }
+    .title {
+        font-size: 38px;
+    }
+    .bg {
+        padding: 55px 0;
+    }
+    .banner-box {
+        background-position: 0 center;
+        padding: 35px 24px 54px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header {
+        width: 116px;
+        height: 37px;
+        background-size: contain;
+    }
+}
+
+@media (max-width: 320px) {
+    .banner-box {
+        background-position: 25% center;
+    }
+    .menu-grid-cover {
+        width: 139px;
+        height: 180px;
+        gap: 12px;
+    }    
+}
