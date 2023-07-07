@@ -251,7 +251,9 @@ header {
     color: #443737;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
-    appearance: none;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
     flex-basis: 279px;
     background: url(../img/arrow.svg);
     background-size: 12.79px 7.75px;
@@ -280,7 +282,8 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     margin-bottom: 20px;
 }
 
