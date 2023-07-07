@@ -348,15 +348,12 @@ header {
 .footer-box {
     display: flex;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-logo {
     width: 63px;
     height: 56px;
-}
-
-.footer-item {
-    flex: 0 0 auto;
 }
 
 .footer-item h2 {
@@ -365,6 +362,7 @@ header {
     text-transform: uppercase;
     margin-bottom: 19px;
     margin-top: 0;
+    line-height: 1.5;
 }
 
 .footer-list li {
@@ -723,11 +721,28 @@ header {
     .header {
         gap: 21px;
     }
+    .menu-other .container {
+        padding-right: 0;
+    }
+    .button-up.visible {
+        display: none;
+    }
 }
 
 @media (max-width: 567px) {
+    .header {
+        padding-top: 19px;
+        padding-bottom: 19px;
+    }
+    .header-logo {
+        width: 116px;
+        height: 37px;
+    }
     .breadcrumbs {
         font-size: 14px;
+    }
+    .bg {
+        margin-bottom: 33px;
     }
     .description {
         font-size: 12px;
@@ -739,8 +754,87 @@ header {
         padding: 55px 0;
     }
     .banner-box {
-        background-position: 0 center;
+        background-position: 17% center;
         padding: 35px 24px 54px;
+        margin-bottom: 40px;
+    }
+    .menu-title {
+        font-size: 27px;
+    }
+    .menu-select {
+        font-size: 12px;
+        flex-basis: 136px;
+        padding: 13px 24px 13px 15px;
+        background-position: 91% center;
+    }
+    .menu-header {
+        margin-bottom: 30px;
+    }
+    .menu-grid {
+        gap: 25px 15px;
+        margin-bottom: 40px;
+    }
+    .menu-grid-cover {
+        height: 56vw;
+        margin-bottom: 10px;
+    }
+    .menu-grid-cover img {
+        height: 100%;
+    }
+    .menu-grid-title {
+        font-size: 15px;
+    }
+    .menu-grid-price {
+        font-size: 16px;
+        margin-top: 6px;
+        margin-bottom: 14px;
+    }
+    .menu-grid-btn {
+        padding: 10px 21px;
+    }
+    .menu-other {
+        height: 108vw;
+    }
+    .menu-other .menu-grid {
+        padding-bottom: 24vw;
+    }
+    .menu-other .menu-grid-cover {
+        height: 54vw;
+    }
+    .menu-other .menu-grid-cover img {
+        height: 100%;
+    }
+    .menu-other .menu-grid-item {
+        flex: 0 0 38vw;
+    }
+    .footer {
+        margin-top: 28px;
+        padding-top: 28px;
+        padding-bottom: 60px;
+    }
+    .footer-list + .footer-list-tel {
+        display: none;
+    }
+    .footer-tel {
+        display: block;
+    }
+    .footer-box {
+        display: grid;
+        grid-template-columns: 30% 70%;
+        grid-template-areas: "logo tel" "link link" "info info";
+        gap: 0;
+    }
+    .footer-item:nth-child(1) {
+        grid-area: logo;
+    }
+    .footer-item:nth-child(2) {
+        grid-area: link;
+    }
+    .footer-item:nth-child(3) {
+        grid-area: info;
+    }
+    .footer-tel {
+        grid-area: tel;
     }
 }
 
@@ -750,15 +844,14 @@ header {
         height: 37px;
         background-size: contain;
     }
+    .menu-grid-title {
+        font-size: 13px;
+    }
+
 }
 
 @media (max-width: 320px) {
     .banner-box {
         background-position: 25% center;
     }
-    .menu-grid-cover {
-        width: 139px;
-        height: 180px;
-        gap: 12px;
-    }    
 }
