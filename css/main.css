@@ -817,6 +817,7 @@ header {
     }
     .footer-tel {
         display: block;
+        text-align: right;
     }
     .footer-box {
         display: grid;
